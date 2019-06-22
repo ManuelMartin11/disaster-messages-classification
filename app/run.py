@@ -19,14 +19,7 @@ engine = create_engine('sqlite:///../disastermessages.db')
 df = pd.read_sql_table('messages_08_06_19_17', engine)
 
 # load model
-#model = joblib.load("../models/model.pkl")
-class Mod:
-    def __init__(self):
-        pass
-    def predict(self, message):
-        return "test"
-
-model = Mod()
+model = joblib.load("../models/model.pkl")
 
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
